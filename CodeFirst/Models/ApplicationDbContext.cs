@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using CodeFirst.EntityConfiguration;
+using System.Data.Entity;
 
 namespace CodeFirst.Models
 {
@@ -12,6 +13,11 @@ namespace CodeFirst.Models
         public ApplicationDbContext()
         : base("name=DefaultConnection")
         {
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new CourseConfiguration());
         }
     }
 }

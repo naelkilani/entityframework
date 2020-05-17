@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityConfiguration\CourseConfigration.cs" />
     <Compile Include="Migrations\202005171347308_InitialModel.cs" />
     <Compile Include="Migrations\202005171347308_InitialModel.designer.cs">
       <DependentUpon>202005171347308_InitialModel.cs</DependentUpon>
@@ -60,6 +61,10 @@
     <Compile Include="Migrations\202005171405312_AddCategoriesTable.cs" />
     <Compile Include="Migrations\202005171405312_AddCategoriesTable.designer.cs">
       <DependentUpon>202005171405312_AddCategoriesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005172324035_ConfigureCoursesTableAndTagsTableRelationship.cs" />
+    <Compile Include="Migrations\202005172324035_ConfigureCoursesTableAndTagsTableRelationship.designer.cs">
+      <DependentUpon>202005172324035_ConfigureCoursesTableAndTagsTableRelationship.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -83,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005171405312_AddCategoriesTable.resx">
       <DependentUpon>202005171405312_AddCategoriesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005172324035_ConfigureCoursesTableAndTagsTableRelationship.resx">
+      <DependentUpon>202005172324035_ConfigureCoursesTableAndTagsTableRelationship.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
