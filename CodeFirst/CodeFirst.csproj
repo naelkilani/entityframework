@@ -57,9 +57,14 @@
     <Compile Include="Migrations\202005171347308_InitialModel.designer.cs">
       <DependentUpon>202005171347308_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005171405312_AddCategoriesTable.cs" />
+    <Compile Include="Migrations\202005171405312_AddCategoriesTable.designer.cs">
+      <DependentUpon>202005171405312_AddCategoriesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Author.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Program.cs" />
@@ -75,6 +80,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202005171347308_InitialModel.resx">
       <DependentUpon>202005171347308_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005171405312_AddCategoriesTable.resx">
+      <DependentUpon>202005171405312_AddCategoriesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

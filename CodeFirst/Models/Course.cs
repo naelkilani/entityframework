@@ -11,6 +11,8 @@ namespace CodeFirst.Models
         public CourseLevel CourseLevel { get; set; }
         public int AuthorId { get; set; }
         public Author Author { get; set; }
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
         public ICollection<Tag> Tags { get; set; }
 
         public Course()
