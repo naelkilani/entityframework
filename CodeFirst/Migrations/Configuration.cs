@@ -1,4 +1,7 @@
-﻿namespace CodeFirst.Migrations
+﻿using System.Collections.Generic;
+using CodeFirst.Models;
+
+namespace CodeFirst.Migrations
 {
     using System.Data.Entity.Migrations;
 
@@ -15,6 +18,23 @@
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
+            context.Authors.AddOrUpdate(a => a.Name,
+            new Author
+            {
+                Name = "Mosh Hamedani",
+                Courses = new List<Course>
+                {
+                    new Course
+                    {
+                        Title = "Entity Framework",
+                        Description = "DB First VS Code First",
+                        Category = new Category
+                        {
+                            Name = "C#"
+                        }
+                    }
+                }
+            });
         }
     }
 }
