@@ -63,7 +63,7 @@ namespace CodeFirst
 
         public static IEnumerable<Student> GetStudents(IList<Student> studentList)
         {
-            return studentList.Where(s => s.age > 12 && s.age < 20);
+            return studentList.Where(s => s.age > 12 && s.age < 20).ToList();
         }
     }
 }
