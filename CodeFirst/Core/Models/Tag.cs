@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 
-namespace CodeFirst.Models
+namespace CodeFirst.Core.Models
 {
-    public class Author
+    public class Tag
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public ICollection<Course> Courses { get; set; }
 
-        public Author()
+        public Tag()
         {
             Courses = new HashSet<Course>();
         }

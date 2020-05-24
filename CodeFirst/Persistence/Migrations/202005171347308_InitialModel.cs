@@ -1,8 +1,7 @@
-﻿namespace CodeFirst.Migrations
+﻿using System.Data.Entity.Migrations;
+
+namespace CodeFirst.Persistence.Migrations
 {
-    using System;
-    using System.Data.Entity.Migrations;
-    
     public partial class InitialModel : DbMigration
     {
         public override void Up()

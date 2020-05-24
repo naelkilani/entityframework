@@ -1,7 +1,8 @@
-﻿using CodeFirst.EntityConfiguration;
-using System.Data.Entity;
+﻿using System.Data.Entity;
+using CodeFirst.Core.Models;
+using CodeFirst.Persistence.EntityConfiguration;
 
-namespace CodeFirst.Models
+namespace CodeFirst.Persistence
 {
     public class ApplicationDbContext : DbContext
     {

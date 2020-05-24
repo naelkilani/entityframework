@@ -1,7 +1,7 @@
-﻿using CodeFirst.Models;
-using System.Data.Entity.ModelConfiguration;
+﻿using System.Data.Entity.ModelConfiguration;
+using CodeFirst.Core.Models;
 
-namespace CodeFirst.EntityConfiguration
+namespace CodeFirst.Persistence.EntityConfiguration
 {
     public class CourseConfiguration : EntityTypeConfiguration<Course>
     {

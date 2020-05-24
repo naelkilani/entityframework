@@ -1,18 +1,17 @@
 ﻿using System.Collections.Generic;
-using CodeFirst.Models;
+using System.Data.Entity.Migrations;
+using CodeFirst.Core.Models;
 
-namespace CodeFirst.Migrations
+namespace CodeFirst.Persistence.Migrations
 {
-    using System.Data.Entity.Migrations;
-
-    internal sealed class Configuration : DbMigrationsConfiguration<CodeFirst.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(CodeFirst.Models.ApplicationDbContext context)
+        protected override void Seed(ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -1,4 +1,4 @@
-﻿using CodeFirst.Models;
+﻿using CodeFirst.Persistence;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,21 @@ namespace CodeFirst
     {   
         static void Main(string[] args)
         {
+            using (var unitOfWork = new UnitOfWork(new ApplicationDbContext()))
+            {
+                // Example1
+                var course = unitOfWork.CourseRepository.Get(1);
+
+                // Example2
+                var courses = unitOfWork.CourseRepository.GetCoursesWithAuthors(1, 4);
+
+                // Example3
+                var author = unitOfWork.AuthorRepository.GetAuthorWithCourses(1);
+                unitOfWork.CourseRepository.RemoveRange(author.Courses);
+                unitOfWork.AuthorRepository.Remove(author);
+                unitOfWork.Save();
+            }
+
             IList<Student> studentList = new List<Student>
             {
                 new Student { StudentID = 1, StudentName = "John", age = 13 } ,
